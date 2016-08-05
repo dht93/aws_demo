@@ -7,6 +7,9 @@ def index():
         return render_template("home.html")
     except Exception as e:
         return str(e)
+@app.route('/contact/')
+def contact():
+	return render_template('contact.html')
 
 if __name__ == '__main__':
-    app.run()
+    app.run(DEBUG=True)
